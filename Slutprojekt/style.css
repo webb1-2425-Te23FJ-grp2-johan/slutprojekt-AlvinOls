@@ -1,0 +1,30 @@
+*{
+
+}
+
+.parent{
+    width: 100%;
+    height: 100%;
+   display: grid;
+    grid-template-rows: 2fr 10% 90%;
+   grid-template-columns: 4fr;
+    grid-template-areas: "menu menu menu menu"
+                        "main main main main"
+                        "main main main main" ;
+}
+                        
+
+.main-page{
+    max-height: 100%;
+    display: grid;
+grid-area: main;
+border: 2px black dotted;
+
+}
+
+.menu-alt{
+display: grid;
+grid-area: menu;
+border: 2px black dotted;
+
+}
