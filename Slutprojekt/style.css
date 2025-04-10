@@ -26,17 +26,20 @@ font-family: "Bebas Neue", sans-serif;;
     max-height: 100%;
     display: grid;
 grid-area: main;
-border: 2px black dotted;
+border: 2px black solid;
+justify-content: center;
+background-color: rgb(58, 58, 58);
+justify-items: center;
 
 }
 
 .menu-alt{
 display: grid;
 grid-area: menu;
-border: 2px black dotted;
+border: 2px black solid;
 grid-template-columns: repeat(6, 1fr) 4fr repeat(6, 1fr);
 gap: 20px;
-background-color: rgb(48, 48, 48)
+background-color: rgb(160, 160, 160)
 
 
 
@@ -45,16 +48,42 @@ background-color: rgb(48, 48, 48)
 #rubrik{
     display: grid;
     justify-content: center;
+    margin: 50px;
 }
 
-#menu-icon{
+#site-name{
+    display: grid;
+
+    background-color: white;
+    border-radius: 10px;
+    height: 40px;
+    align-self: center;
+    padding-top: 8px;
+    padding-left: 2px;
+padding-right: 2px;
+border: black solid;
+}
+
+#rubrik{
+    display: grid;
+    background-color: white;
+    border-radius: 10px;
+    height: 40px;
+    padding-top: 8px;
+    padding-left: 2px;
+padding-right: 2px;
+border: black solid;
+width:max-content;
+}
+
+.menu-icon{
     display: grid;
     justify-content: center;
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    
+    border: black solid;
 }
 .menu-sct{
    display: grid;
@@ -64,12 +93,18 @@ background-color: rgb(48, 48, 48)
     justify-content: center;
     
 }
-#book-icon{
-    height: 50px;
-    width: 50px;
-    background-color: rgb(255, 255, 255);
-    border-radius:10px ;
-    
+
+.main-window{
+    display: grid;
+    justify-content: center;
+    height: 1000px;
+    width: 1700px;
+    /* background-color: rgb(255, 255, 255); */
+    border-radius: 10px;
+    /* border: black solid; */
+    grid-template-columns: repeat(3, 1fr );
+    grid-template-rows: repeat(3, 1fr );
+    gap: 20px;
 }
 
 /* .icon-outlay{
@@ -78,3 +113,10 @@ background-color: rgb(48, 48, 48)
     background-color: rgb(172, 172, 172);
     border-radius:10px ;
 } */
+
+.main-window p{
+    background-color: white;
+    border-radius: 10px;
+    border: black solid;
+    box-shadow: rgb(0, 0, 0) 4px 4px 4px ;
+}
