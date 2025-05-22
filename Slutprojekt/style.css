@@ -1,122 +1,215 @@
-*{
-margin: 0;
-padding: 0;
-font-family: "Bebas Neue", sans-serif;;
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap");
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rajdhani", sans-serif;
+  color: #e0e0e0;
 }
 
-.parent{
-    width: 100%;
-    height: 100%;
-   display: grid;
-    grid-template-rows: 8% 92%;
-   grid-template-columns: 4fr;
-    grid-template-areas: "menu menu menu menu"
-                        "main main main main"
-                        "main main main main" 
-                        "main main main main"
-                        "main main main main"
-                        "main main main main"
-                        "main main main main"
-                        "main main main main"
-                        "main main main main";
-}
-                        
-
-.main-page{
-    max-height: 100%;
-    display: grid;
-grid-area: main;
-border: 2px black solid;
-justify-content: center;
-background-color: rgb(58, 58, 58);
-justify-items: center;
-
+body {
+  background-color: #1c1c2c;
+  overflow-x: hidden;
 }
 
-.menu-alt{
-display: grid;
-grid-area: menu;
-border: 2px black solid;
-grid-template-columns: repeat(6, 1fr) 4fr repeat(6, 1fr);
-gap: 20px;
-background-color: rgb(160, 160, 160)
-
-
-
+a {
+  text-decoration: none;
+  color: #00bcd4;
+  transition: color 0.3s ease;
 }
 
-#rubrik{
-    display: grid;
-    justify-content: center;
-    margin: 50px;
+a:hover {
+  color: #ffffff;
 }
 
-#site-name{
-    display: grid;
+/* Parent Container */
+.parent {
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "menu-area"
+    "main-area";
+}
 
-    background-color: white;
-    border-radius: 10px;
+/* Menu */
+.menu-alt {
+  grid-area: menu-area;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #0f0e1a;
+  border-bottom: 2px solid #00bcd4;
+  box-shadow: 0 2px 8px rgba(0, 188, 212, 0.3);
+  height: 80px;
+}
+
+#site-name {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #00bcd4;
+}
+
+.menu-sct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.menu-icon {
+  height: 45px;
+  width: 45px;
+  background-color: #2b2b3b;
+  border-radius: 8px;
+  border: 1px solid #00bcd4;
+  padding: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-icon:hover {
+  transform: translateY(-3px);
+  background-color: #00bcd4;
+}
+
+/* Main Content */
+.main-page {
+  grid-area: main-area;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #1c1c2c;
+}
+
+#rubrik {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.8em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 80px;
+  color: #ffffff;
+  background-color: #2b2b3b;
+  border-radius: 12px;
+  border: 2px solid #00bcd4;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+  padding: 25px 40px;
+  max-width: 90%;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.main-window {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  width: 90%;
+  max-width: 1600px;
+  justify-items: center;
+  align-items: stretch;
+  margin-top: 20px;
+}
+
+.main-card {
+  background-color: #2b2b3b;
+  border-radius: 12px;
+  border: 1px solid #00bcd4;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+  width: 100%;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  overflow-y: auto; /* Kept for scrollability */
+}
+
+.main-card:hover {
+  transform: translateY(-8px);
+  border-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 188, 212, 0.4);
+}
+
+.main-card h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.8em;
+  color: #00bcd4;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.main-card p {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #e0e0e0;
+  text-align: justify;
+  flex-grow: 1;
+  padding-right: 10px; /* Slight padding for scrollbar */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .menu-alt {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  #site-name {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+
+  .menu-icon {
     height: 40px;
-    align-self: center;
-    padding-top: 8px;
-    padding-left: 2px;
-padding-right: 2px;
-border: black solid;
+    width: 40px;
+  }
+
+  .main-page {
+    padding: 30px 10px;
+  }
+
+  #rubrik {
+    font-size: 2em;
+    padding: 15px 25px;
+    margin-bottom: 50px;
+  }
+
+  .main-window {
+    grid-template-columns: 1fr;
+    width: 95%;
+    gap: 30px;
+  }
+
+  .main-card {
+    min-height: 300px;
+    padding: 20px;
+  }
+
+  .main-card h2 {
+    font-size: 1.5em;
+    text-align: center;
+  }
 }
 
-#rubrik{
-    display: grid;
-    background-color: white;
-    border-radius: 10px;
-    height: 40px;
-    padding-top: 8px;
-    padding-left: 2px;
-padding-right: 2px;
-border: black solid;
-width:max-content;
-}
+@media (max-width: 480px) {
+  #rubrik {
+    font-size: 1.5em;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+  }
 
-.menu-icon{
-    display: grid;
-    justify-content: center;
-    height: 50px;
-    width: 50px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    border: black solid;
-}
-.menu-sct{
-   display: grid;
-    width: 100%;
-    height: 100%;
-    align-content: center;
-    justify-content: center;
-    
-}
+  .main-card h2 {
+    font-size: 1.3em;
+  }
 
-.main-window{
-    display: grid;
-    justify-content: center;
-    height: 1000px;
-    width: 1700px;
-    /* background-color: rgb(255, 255, 255); */
-    border-radius: 10px;
-    /* border: black solid; */
-    grid-template-columns: repeat(3, 1fr );
-    grid-template-rows: repeat(3, 1fr );
-    gap: 20px;
-}
-
-/* .icon-outlay{
-    height: 50px;
-    width: 50px;
-    background-color: rgb(172, 172, 172);
-    border-radius:10px ;
-} */
-
-.main-window p{
-    background-color: white;
-    border-radius: 10px;
-    border: black solid;
-    box-shadow: rgb(0, 0, 0) 4px 4px 4px ;
+  .main-card p {
+    font-size: 1em;
+  }
 }
