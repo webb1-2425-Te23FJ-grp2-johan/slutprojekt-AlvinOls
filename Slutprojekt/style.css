@@ -80,7 +80,7 @@ img{
 
 .menu-icon:hover {
   transform: translateY(-3px);
-  background-color: #00bcd4;
+  background-color: #00bbd46b;
 }
 
 /* Main Content */
@@ -162,9 +162,25 @@ img{
 .bottom-info{
   display: grid;
 border-top: 3px solid #00bcd4;
+margin-top: 100px;
+width: 100%;
 }
-.main-page .bottom-info{
-  
+.bottom-info p{
+  padding-top: 8px;
+  padding-bottom: 0px;
+text-decoration: underline;
+color: #a4f4ff;
+width: fit-content;
+}
+
+.bottom-name{
+  display: grid;
+  justify-content: end;
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #00bcd4;
+width:fit-content;
 }
 
 
