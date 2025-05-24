@@ -50,7 +50,7 @@ a:hover {
 
 #site-name {
   font-family: "Orbitron", sans-serif;
-  font-size: 2.2em;
+  font-size: 33px;
   font-weight: 700;
   color: #00bcd4;
 }
@@ -69,7 +69,7 @@ a:hover {
   border-radius: 8px;
   border: 1px solid #00bcd4;
   padding: 8px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s , background-color 0.3s ;
   cursor: pointer;
   color: #00bcd4;
 }
@@ -83,7 +83,7 @@ img{
   background-color: #00bbd46b;
 }
 
-/* Main Content */
+
 .main-page {
   grid-area: main-area;
   display: flex;
@@ -95,7 +95,7 @@ img{
 
 #rubrik {
   font-family: "Orbitron", sans-serif;
-  font-size: 2.8em;
+  font-size: 50px;
   font-weight: 700;
   text-align: center;
   margin-bottom: 80px;
@@ -106,6 +106,22 @@ img{
   box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
   padding: 25px 40px;
   max-width: 90%;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+#rubrik2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 80px;
+  color: #ffffff;
+  background-color: #2b2b3b;
+  border-radius: 12px;
+  border: 2px solid #00bcd4;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+  padding: 25px 40px;
+  max-width: 40%;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 }
 
@@ -130,7 +146,7 @@ img{
   flex-direction: column;
   max-height: 350px;
   width: 100%;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
   overflow-y: auto;
   max-width: 800px;
 }
@@ -151,12 +167,12 @@ img{
 
 .main-card p {
   font-family: "Rajdhani", sans-serif;
-  font-size: 1.1em;
+  font-size: 15px;
   line-height: 1.6;
   color: #e0e0e0;
   text-align: justify;
-  flex-grow: 1;
-  padding-right: 10px; /* Slight padding for scrollbar */
+  /* flex-grow: 1; */
+  padding-right: 10px;
 }
 
 .bottom-info{
@@ -183,17 +199,64 @@ width: fit-content;
 width:fit-content;
 }
 
+input, textarea, button{
+  color: black;
+}
+
+/* ... (Your existing CSS rules) ... */
+
+/* START OF SIMPLE COOKIE BAR STYLES */
+#simple-cookie-bar {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+background-color: #0f0e1a; /* Adjusted to your menu background for consistency */
+ color: #e0e0e0;
+padding: 15px 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+z-index: 1000;
+}
+
+#simple-cookie-bar p {
+margin: 0;
+ font-size: 0.9em;
+font-family: "Rajdhani", sans-serif;
+}
+
+#simple-cookie-bar button {
+background-color: #00bcd4;
+color: #0f0e1a;
+font-family: "Orbitron", sans-serif;
+font-size: 0.9em;
+padding: 8px 15px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+#simple-cookie-bar.hidden {
+display:none;
+}
+/* END OF SIMPLE COOKIE BAR STYLES */
 
 /* Media Queries */
 @media (max-width: 768px) {
+/* ... (rest of your media queries) ... */
+}
+
+@media (max-width: 768px) {
   .menu-alt {
-    flex-direction: column;
+    flex-direction: row;
     height: auto;
     padding: 10px;
   }
 
   #site-name {
-    font-size: 1.8em;
+    font-size: 18px;
     margin-bottom: 10px;
   }
 
@@ -207,7 +270,7 @@ width:fit-content;
   }
 
   #rubrik {
-    font-size: 2em;
+    font-size: 22px;
     padding: 15px 25px;
     margin-bottom: 50px;
   }
@@ -224,23 +287,23 @@ width:fit-content;
   }
 
   .main-card h2 {
-    font-size: 1.5em;
+    font-size: 22px;
     text-align: center;
   }
 }
 
 @media (max-width: 480px) {
   #rubrik {
-    font-size: 1.5em;
+    font-size: 20px;
     padding: 10px 15px;
     margin-bottom: 30px;
   }
 
   .main-card h2 {
-    font-size: 1.3em;
+    font-size: 20px;
   }
 
   .main-card p {
-    font-size: 1em;
+    font-size: 15px;
   }
 }
