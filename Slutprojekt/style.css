@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap");
-
-/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +22,7 @@ a:hover {
   color: #ffffff;
 }
 
-/* Parent Container */
+
 .parent {
   width: 100vw;
   min-height: 100vh;
@@ -159,7 +157,7 @@ img{
 
 .main-card h2 {
   font-family: "Orbitron", sans-serif;
-  font-size: 1.8em;
+  font-size: 28px;
   color: #00bcd4;
   margin-bottom: 15px;
   text-align: left;
@@ -203,15 +201,15 @@ input, textarea, button{
   color: black;
 }
 
-/* ... (Your existing CSS rules) ... */
 
-/* START OF SIMPLE COOKIE BAR STYLES */
+
+
 #simple-cookie-bar {
 position: fixed;
 bottom: 0;
 left: 0;
 width: 100%;
-background-color: #0f0e1a; /* Adjusted to your menu background for consistency */
+background-color: #0f0e1a;
  color: #e0e0e0;
 padding: 15px 20px;
 display: flex;
@@ -240,12 +238,6 @@ cursor: pointer;
 
 #simple-cookie-bar.hidden {
 display:none;
-}
-/* END OF SIMPLE COOKIE BAR STYLES */
-
-/* Media Queries */
-@media (max-width: 768px) {
-/* ... (rest of your media queries) ... */
 }
 
 @media (max-width: 768px) {
